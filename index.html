@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SevaCoop — Verified Home Services by Worker Cooperatives</title>
+<meta name="description" content="Book background-verified plumbers, electricians and caregivers from registered labour cooperatives. 85% of every bill goes directly to the worker.">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#153e6e">
+</head>
+<body data-page="home" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+
+<main id="main">
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eye">Karnataka Co-operative Societies Act, 1959</span>
+      <h2 data-i18n="hero_h">Verified home services. Owned by the workers who serve you.</h2>
+      <p class="lead" data-i18n="hero_p">SevaCoop is the official portal of registered labour cooperatives in Bengaluru. No hidden commissions, no surge pricing — every booking is receipted and audited.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="search.html" data-i18n="find_btn">Find a verified worker</a>
+        <a class="btn btn-outline" href="profile.html" data-i18n="verify_btn">Verify a worker ID</a>
+        <a class="btn btn-outline" href="emergency.html" style="border-color:var(--red);color:var(--red)">Emergency 15-min</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>12,400+</b><span>Member-workers</span></div>
+        <div class="stat"><b>85%</b><span>Of bill goes to worker</span></div>
+        <div class="stat"><b>4.9 ★</b><span>Average rating</span></div>
+        <div class="stat"><b>Rs. 1.48 Cr+</b><span>Welfare fund disbursed</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Book in 1 minute</h3>
+      <p class="muted small">Fixed government-notified rates. Free rescheduling up to 2 hours before.</p>
+      <form action="search.html" method="get">
+        <label for="hq">What do you need?</label>
+        <select id="hq" name="trade">
+          <option>Plumbing</option><option>Electrical</option><option>Carpentry</option><option>Home Care</option><option>Appliance Repair</option>
+        </select>
+        <label for="hq2">Area</label>
+        <input id="hq2" type="text" value="Indiranagar, Bengaluru">
+        <p><button class="btn btn-green btn-block" type="submit">Check availability</button></p>
+      </form>
+      <p class="small muted">Helpline <a href="tel:18004190888">1800-419-0888</a> (8 AM – 8 PM)</p>
+    </div>
+  </div></div>
+
+  <div class="wrap section">
+    <h2>Popular services</h2>
+    <p class="sub">All 10 trades covered — including institutions (schools, RWAs). Flat diagnosis caps.</p>
+    <div class="grid cols-4">
+      <div class="card"><h3>Plumbing</h3><p class="muted small">Leaks, taps, drains. From Rs. 299.</p><a href="search.html">Find plumbers →</a></div>
+      <div class="card"><h3>Electrical</h3><p class="muted small">Fans, inverters, safety audit. From Rs. 319.</p><a href="search.html">Find electricians →</a></div>
+      <div class="card"><h3>Cleaning</h3><p class="muted small">Deep clean, institutions. From Rs. 269.</p><a href="search.html">Find cleaners →</a></div>
+      <div class="card"><h3>Caregiving</h3><p class="muted small">Background-checked aides. From Rs. 299.</p><a href="search.html">Find caregivers →</a></div>
+    </div>
+    <p class="small"><a href="search.html">See all 10 trades (painters, drivers, gardeners…) →</a></p>
+  </div>
+
+  <div class="wrap section">
+    <div class="card">
+      <h3>Where does your money go?</h3>
+      <p class="muted small">Statutory 85 / 10 / 5 rule. Shown on every receipt.</p>
+      <div class="splitbar"><span style="width:85%"></span><span style="width:10%"></span><span style="width:5%"></span></div>
+      <div class="legend"><span><i class="dot" style="background:var(--green)"></i>Worker take-home 85%</span><span><i class="dot" style="background:var(--navy)"></i>Health + pension 10%</span><span><i class="dot" style="background:#9aa9bd"></i>Platform upkeep 5%</span></div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <h2>How it works</h2>
+    <div class="grid cols-3">
+      <div class="card"><h3>1. Search &amp; geo-match</h3><p class="muted small">Nearest verified worker by GPS distance, rating and availability.</p></div>
+      <div class="card"><h3>2. Book &amp; pay</h3><p class="muted small">Scheduled slots or 15-min emergency. UPI / card / NEFT with invoice.</p></div>
+      <div class="card"><h3>3. Rate &amp; welfare</h3><p class="muted small">Your rating protects quality. 10% of every bill funds health + pension.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="grid cols-3">
+      <div class="card"><h3>Are you a worker?</h3><p class="muted small">Free registration, trade test, member ID + insurance in 3–5 days.</p><a class="btn btn-outline" href="register.html">Join as worker</a></div>
+      <div class="card"><h3>Paying for a visit?</h3><p class="muted small">UPI, card or NEFT with printable 85/10/5 receipts.</p><a class="btn btn-outline" href="payments.html">Open payments</a></div>
+      <div class="card"><h3>Federation &amp; AI planning</h3><p class="muted small">Society admin, approvals and 14-day demand forecast (demo).</p><a class="btn btn-outline" href="admin/index.html">Open admin demo</a></div>
+    </div>
+    <p class="small muted" style="margin-top:12px">Platform: responsive web (installable mock) • AI forecast • Geo matching • Digital payments • Cloud-ready API design. Full coverage of PS ID 26089 — see README matrix.</p>
+  </div>
+</main>
+
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>

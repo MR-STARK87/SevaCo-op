@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emergency 15-min Service — SevaCoop</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="emergency" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Emergency &amp; on-demand (15-min dispatch)</h2>
+  <p class="sub">Burst pipes, power failure, lockouts. Nearest verified worker is auto-assigned. Rs. 499 flat visit (85% to worker).</p>
+  <div class="grid cols-2">
+    <form class="card" id="emg-form">
+      <label for="e-issue">What's the emergency?</label>
+      <select id="e-issue"><option>Burst pipe / major leak</option><option>Power failure / sparking</option><option>Door lockout</option><option>Blocked drain overflowing</option></select>
+      <label for="e-addr">Address with landmark</label>
+      <textarea id="e-addr" rows="2" placeholder="Flat, street, gate code…">Apartment 3B, Palm Meadows, HAL 2nd Stage</textarea>
+      <label for="e-phone">Callback number</label>
+      <input id="e-phone" type="tel" placeholder="98XXXXXXXX">
+      <p><button class="btn btn-primary btn-block" type="submit" style="background:var(--red);border-color:var(--red)">Dispatch nearest worker now</button></p>
+      <p class="small muted">Demo: assigns from synthetic GPS distances. For real danger (fire/gas), call 112 first.</p>
+    </form>
+    <div class="card"><h3>Nearest workers right now (mock GPS)</h3><div id="emg-near"></div></div>
+  </div>
+  <div id="emg-status" hidden style="margin-top:12px"></div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/emergency.js"></script>
+</body>
+</html>

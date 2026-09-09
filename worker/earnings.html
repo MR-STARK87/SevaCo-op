@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Earnings — SevaCoop Worker</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="worker-earnings" data-root=".." data-portal="worker">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Earnings &amp; payouts</h2>
+  <p class="sub">Audited society ledger • Co-op Reg #KA-PL-8812/BLR • Zero hidden commissions.</p>
+  <div class="grid cols-3">
+    <div class="card"><h3>Available</h3><p style="font-size:26px;margin:0">Rs. 4,280</p><button class="btn btn-green" id="payout-open">Withdraw to bank / UPI</button></div>
+    <div class="card"><h3>September net</h3><p style="font-size:26px;margin:0">Rs. 42,650</p><p class="small muted">84.2% direct take-home</p></div>
+    <div class="card"><h3>Welfare + dividend</h3><p class="small">Pension pool Rs. 5,540 • Dividend Rs. 3,120 (pays 15 Dec)</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <label for="ledger-q">Filter ledger</label>
+    <input id="ledger-q" type="text" placeholder="Search job or date…">
+    <div style="overflow-x:auto;margin-top:12px"><table>
+      <thead><tr><th>Date</th><th>Job</th><th>Bill</th><th>You received</th></tr></thead>
+      <tbody id="ledger-body"></tbody>
+    </table></div>
+  </div>
+  <div id="payout-modal" hidden>
+    <div class="card" style="margin-top:12px"><h3>Confirm instant payout</h3>
+    <p class="small">Rs. 4,280 via zero-fee cooperative RTGS / IMPS. Usually credited within 30 minutes.</p>
+    <div style="display:flex;gap:10px"><button class="btn btn-green" id="payout-confirm">Confirm</button><button class="btn btn-outline" id="payout-close">Cancel</button></div></div>
+  </div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="../assets/js/data.js"></script><script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/worker.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join as Worker — SevaCoop</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="register" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Worker registration</h2>
+  <p class="sub">For electricians, plumbers, carpenters, painters, helpers, caregivers, drivers, gardeners, cleaners, technicians. Free — verification in 3–5 days (demo).</p>
+  <div class="steps"><div class="step active" id="st1">1. Personal</div><div class="step" id="st2">2. Trade &amp; skills</div><div class="step" id="st3">3. Documents</div><div class="step" id="st4">4. Society</div></div>
+  <form class="card" id="reg-form">
+    <div class="reg-step" data-step="1">
+      <div class="row"><div><label for="r-name">Full name</label><input id="r-name" required placeholder="e.g. Divya H."></div>
+      <div><label for="r-phone">Mobile</label><input id="r-phone" type="tel" required placeholder="98XXXXXXXX"></div></div>
+      <label for="r-area">Area / Zone</label><input id="r-area" placeholder="e.g. Domlur, East Bengaluru">
+    </div>
+    <div class="reg-step" data-step="2" hidden>
+      <label for="r-trade">Primary trade</label><select id="r-trade"></select>
+      <label for="r-exp">Experience (years)</label><input id="r-exp" type="number" value="3" min="0" max="40">
+      <label for="r-skills">Key skills (comma separated)</label><input id="r-skills" placeholder="e.g. concealed leak detection, geyser service">
+    </div>
+    <div class="reg-step" data-step="3" hidden>
+      <p class="small muted">Demo only — files stay in your browser, nothing is uploaded.</p>
+      <label for="r-aadhaar">Aadhaar (last 4 digits)</label><input id="r-aadhaar" maxlength="4" placeholder="9104">
+      <label for="r-file">Trade certificate / photo</label><input id="r-file" type="file" accept=".pdf,.jpg,.png">
+      <p class="small muted" id="r-filename">No file selected.</p>
+    </div>
+    <div class="reg-step" data-step="4" hidden>
+      <label for="r-soc">Preferred cooperative society</label><select id="r-soc"></select>
+      <p><label style="font-weight:400"><input type="checkbox" id="r-decl" style="width:auto"> I declare my details are true and I accept the cooperative's fair-wage charter and code of conduct.</label></p>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:14px">
+      <button class="btn btn-outline" type="button" id="reg-back">Back</button>
+      <button class="btn btn-primary" type="button" id="reg-next">Continue</button>
+      <button class="btn btn-green" type="submit" id="reg-submit" hidden>Submit application</button>
+    </div>
+  </form>
+  <div id="reg-done" hidden style="margin-top:12px"></div>
+  <div class="card" style="margin-top:16px"><h3>What happens next (mock timeline)</h3>
+    <ul class="small muted"><li>Day 0 — Application ID issued, SMS confirmation</li><li>Day 1–2 — Document + police clearance check</li><li>Day 3 — Trade test at guild centre</li><li>Day 4–5 — Approval → member ID + insurance activated</li></ul></div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/register.js"></script>
+</body>
+</html>

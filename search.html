@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Services — SevaCoop</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="search" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Find verified workers</h2>
+  <p class="sub">All 10 trades — plumbing to caregiving. Geo-matched by distance (demo GPS).</p>
+  <div class="card" style="margin-bottom:16px">
+    <div class="row">
+      <div><label for="f-trade">Trade</label>
+        <select id="f-trade"><option>All</option></select>
+      </div>
+      <div><label for="f-q">Search name / area / zone</label><input id="f-q" type="text" placeholder="e.g. Ramesh, Indiranagar, East"></div>
+    </div>
+    <div class="row">
+      <div><label for="f-dist">Max distance</label>
+        <select id="f-dist"><option value="3">Within 3 km</option><option value="6" selected>Within 6 km</option><option value="12">Within 12 km</option><option value="99">All Bengaluru</option></select>
+      </div>
+      <div><label>&nbsp;</label><button class="btn btn-outline btn-block" id="f-locate" type="button">Use my location (mock GPS)</button></div>
+    </div>
+    <p class="small muted" id="f-locnote">Distances are synthetic demo data measured from city centre.</p>
+    <p><label style="display:flex;gap:8px;align-items:center;font-weight:400"><input id="f-avail" type="checkbox" checked style="width:auto"> Show only workers available today</label></p>
+    <p><span class="small muted">Coverage map (mock): </span><span id="zone-map"></span></p>
+    <p class="small muted" id="result-count"></p>
+  </div>
+  <div class="grid" id="worker-list"></div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/search.js"></script>
+</body>
+</html>

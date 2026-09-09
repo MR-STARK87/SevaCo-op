@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payments & Invoices — SevaCoop</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="payments" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Payments &amp; invoices</h2>
+  <p class="sub">Demo checkout — UPI / card / NEFT. No real money moves. Every receipt shows the 85/10/5 split.</p>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Pay an invoice (mock)</h3>
+      <form id="pay-form">
+        <label for="p-inv">Invoice</label><select id="p-inv"></select>
+        <label for="p-mode">Method</label>
+        <select id="p-mode"><option>UPI</option><option>Card</option><option>NEFT (institution)</option><option>Cash after visit</option></select>
+        <label for="p-id">UPI ID / card (demo, not charged)</label>
+        <input id="p-id" type="text" placeholder="name@upi">
+        <p><button class="btn btn-green btn-block" type="submit">Pay securely (demo)</button></p>
+      </form>
+      <div id="pay-done" hidden></div>
+    </div>
+    <div class="card">
+      <h3>How settlement works</h3>
+      <div class="splitbar"><span style="width:85%"></span><span style="width:10%"></span><span style="width:5%"></span></div>
+      <div class="legend"><span><i class="dot" style="background:var(--green)"></i>Worker 85%</span><span><i class="dot" style="background:var(--navy)"></i>Welfare 10%</span><span><i class="dot" style="background:#9aa9bd"></i>Platform 5%</span></div>
+      <p class="small muted">Money goes to the cooperative nodal account, then auto-splits within 30 minutes. Worker payouts are zero-fee.</p>
+      <button class="btn btn-outline" onclick="window.print()">Print / save receipt (PDF)</button>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>All invoices (synthetic + your bookings)</h3>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>Invoice</th><th>Booking</th><th>Date</th><th>Bill</th><th>Worker share</th><th>Mode</th><th>Status</th></tr></thead>
+      <tbody id="inv-body"></tbody>
+    </table></div>
+  </div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/payments.js"></script>
+</body>
+</html>

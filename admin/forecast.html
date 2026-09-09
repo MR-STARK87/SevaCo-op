@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Demand Forecast — SevaCoop Admin</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="admin-forecast" data-root=".." data-portal="admin">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>AI demand forecast &amp; workforce allocation</h2>
+  <p class="sub">Simulated model output (mock regression on bookings + festival calendar + monsoon). No backend — runs fully in browser for SIH demo.</p>
+  <div class="card">
+    <h3>Forecasted job requests / day (next 14 days)</h3>
+    <canvas id="fc-chart" width="900" height="320" style="width:100%;height:auto;border:1px solid var(--line);border-radius:8px"></canvas>
+    <div class="legend" style="margin-top:8px"><span><i class="dot" style="background:var(--green)"></i>Plumbing</span><span><i class="dot" style="background:var(--navy)"></i>Electrical</span><span><i class="dot" style="background:#c77414"></i>Cleaning</span></div>
+    <p class="small muted">Model inputs (mock): last 90 days bookings, weekend/festival flags, rainfall index. Method: seasonal naive + uplift factors. Replace with real ML API later.</p>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Suggested workforce allocation</h3>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>Zone</th><th>Action</th><th>Why</th></tr></thead>
+      <tbody id="alloc-body"></tbody></table></div>
+  </div>
+  <div class="notice" style="margin-top:16px"><b>How to make it real later:</b> <span class="small">push bookings to cloud DB → nightly training job → expose /forecast API → this page fetches it. UI stays identical.</span></div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

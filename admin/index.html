@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Federation Admin — SevaCoop</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="admin-home" data-root=".." data-portal="admin">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Cooperative federation dashboard</h2>
+  <p class="sub">Ministry of Cooperation (demo) — societies, workers, bookings, payouts. Synthetic data.</p>
+  <div class="grid cols-4" id="kpi-row"></div>
+  <div class="grid cols-2" style="margin-top:16px">
+    <div class="card"><h3>Member societies (5)</h3><div style="overflow-x:auto"><table>
+      <thead><tr><th>Society</th><th>Reg.</th><th>Workers</th><th>Rating</th><th>Status</th></tr></thead>
+      <tbody id="soc-body"></tbody></table></div></div>
+    <div class="card"><h3>Pending worker approvals <span class="badge" id="pend-count"></span></h3>
+      <div id="pend-list"></div>
+      <p class="small muted">Approvals here also update the public directory (demo).</p></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Recent bookings (households + institutions)</h3>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>ID</th><th>Date</th><th>Customer</th><th>Worker</th><th>Service</th><th>Fee</th><th>Status</th></tr></thead>
+      <tbody id="book-body"></tbody></table></div>
+    <p><a class="btn btn-outline" href="forecast.html">Open AI demand forecast →</a></p>
+  </div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Service — SevaCoop</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="booking" data-root="." data-portal="customer">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="site-chrome-header"></div>
+<main id="main" class="wrap section">
+  <h2>Book a service</h2>
+  <p class="sub">Worker: <b id="worker-name">…</b> • Free rescheduling up to 2 hours before.</p>
+  <div class="steps"><div class="step active">1. Service</div><div class="step">2. Time</div><div class="step">3. Address</div></div>
+  <div class="grid cols-2">
+    <form class="card" id="booking-form">
+      <label for="b-service">Select service</label>
+      <select id="b-service"></select>
+      <label>Choose time slot</label>
+      <div class="chip-group" id="b-slots"></div>
+      <label for="b-address">Full service address</label>
+      <textarea id="b-address" rows="3" placeholder="Flat / street / landmark, Bengaluru"></textarea>
+      <label for="b-phone">Mobile number</label>
+      <input id="b-phone" type="tel" placeholder="98XXXXXXXX" required>
+      <p><button class="btn btn-primary btn-block" type="submit">Confirm booking</button></p>
+      <p class="small muted">Pay after visit. Receipt shows worker's 85% share.</p>
+    </form>
+    <div>
+      <div class="card"><h3>Booking summary</h3><p id="b-summary" class="small">…</p></div>
+      <div id="booking-done" hidden style="margin-top:12px"></div>
+    </div>
+  </div>
+</main>
+<div id="site-chrome-footer"></div>
+<script src="assets/js/data.js"></script><script src="assets/js/i18n.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/booking.js"></script>
+</body>
+</html>
